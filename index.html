@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <title>Mitsogo | Home</title>
+</head>
+<body id="body">
+  <div class="wrapper" id="main-wrapper">
+    <!--//////////////////// sidebar section start /////////////////-->
+    <div class="sidebar">
+      <div class="logo">
+        <a class="d-block px-4 py-3 text-decoration-none text-white cursor-pointer">
+          <h5 class="m-0" style="padding-top:3px;"><b>A C M E</b></h5>
+        </a>
+      </div>
+      <ul class="sidemenu_list">
+        <li>
+          <a href=""><span class="menulist-icon home-icon d-inline-block"></span>Home</a>
+        </li>
+        <li>
+          <a class="active" href=""><span class="menulist-icon dashboard-icon d-inline-block"></span>Dashboard</a>
+        </li>
+        <li>
+          <a href=""><span class="menulist-icon inbox-icon d-inline-block"></span>Inbox<span class="badge rounded-pill bg-danger float-end">New</span></a>
+        </li>
+        <li>
+          <a href=""><span class="menulist-icon product-icon d-inline-block"></span>Products</a>
+        </li>
+        <li>
+          <a href=""><span class="menulist-icon admin-icon d-inline-block"></span>Admin</a>
+        </li>
+      </ul>
+    </div>
+    <!--========================= sidebar section end =========================-->
+
+    <div class="main-content">
+      <!--========================= top nav start =========================-->
+      <nav class="navbar topnav navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-fluid d-flex">
+          <div class="d-flex w-50 me-auto">
+            <span class="collapse-icon bg-icon cursor-pointer ms-2" onclick="SidebarEnableDisable()"> </span>
+            <div class="position-relative search-div ms-4">
+              <span class="search-icon bg-icon"></span>
+              <input class="form-control form-control-sm border-0 bg-body rounded input-global-search" type="text" placeholder="Search transactions, invoices or help">
+            </div>
+          </div>
+          <div class="d-flex">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0">
+              <!--================== mobile search =========================-->
+              <li class="nav-item search-mobile-icon d-none">
+                <a class="nav-link border-0 bg-body rounded p-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="search-mobile-icon d-block bg-icon mt-1"></span>
+                </a>
+              </li>
+              <!--================== Notification =========================-->
+              <li class="nav-item dropdown">
+                <a class="nav-link border-0 bg-body rounded dropdown-toggle p-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="notification-icon d-block bg-icon mt-1">
+                    <span class="indicator"></span>
+                  </a>
+                  <ul class="dropdown-menu border-0 shadow-sm bg-body dropdown-menu-end notification-drop">
+                    <li class="dropdown-item">
+                      <a class="d-block text-decoration-none notification-link" href="">
+                        <img class="img-fluid rounded-circle shadow-sm position-absolute" src="assets/img/profile-pic-02.jpg"/>
+                        <div class="d-flex user-detail">
+                          <span class="notification-username me-auto">Bavid Kames</span>
+                          <span class="ms-auto notification-time">2 min ago</span>
+                        </div>
+                        <p class="notification_p">Assigned you on the call with Sara</p>
+                      </a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="d-block text-decoration-none notification-link" href="">
+                        <img class="img-fluid rounded-circle shadow-sm position-absolute" src="assets/img/profile-pic-06.jpg"/>
+                        <div class="d-flex user-detail">
+                          <span class="notification-username me-auto">Bavid Kames</span>
+                          <span class="ms-auto notification-time">5 min ago</span>
+                        </div>
+                        <p class="notification_p">Marked the task <span class="text-primary">New UI </span>as done</p>
+                      </a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="d-block text-decoration-none notification-link" href="">
+                        <img class="img-fluid rounded-circle shadow-sm position-absolute" src="assets/img/profile-pic-05.jpg"/>
+                        <div class="d-flex user-detail">
+                          <span class="notification-username me-auto">Bavid Kames</span>
+                          <span class="ms-auto notification-time">15 min ago</span>
+                        </div>
+                        <p class="notification_p">Added a new comment on Sales task</p>
+                      </a>
+                    </li>
+
+                    <li class="ps-0 p-0 pt-1 mt-2 text-center" style="border-top:1px solid #f5f7fb;"><a class="text-primary cursor-pointer text-decoration-none d-block show-more-link"><small>Show More</small></a></li>
+                  </ul>
+                </li>
+                <!--================== profile =========================-->
+                <li class="nav-item dropdown">
+                  <a class="nav-link border-0 user-top-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span>John Doe<span class="user-icon bg-icon mt-2"></span></span> <img style="width:30px;" class="img-fluid rounded-circle shadow-sm ms-4" src="assets/img/profile-pic-01.jpg"/>
+                  </a>
+                  <ul class="dropdown-menu right-top-icon border-0 shadow-sm bg-body dropdown-menu-end">
+                    <li class="dropdown-item"><a><span class="profilelist-icon profile-icon d-inline-block"></span> My Profile</a></li>
+                    <li class="dropdown-item"><a><span class="billing-icon profilelist-icon d-inline-block"></span> Billing</a></li>
+                    <li class="dropdown-item"><a><span class="logout-icon profilelist-icon d-inline-block"></span> Logout</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--================== top nav end =========================-->
+        <!--================== main heading start =========================-->
+        <section class="p-2 p-sm-3 p-md-4 p-lg-4 py-3">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 d-flex">
+                <div class="me-auto">
+                  <h4 class="heading">Overview</h4>
+                </div>
+                <div class="ms-auto">
+                  <button class="btn btn-violet position-relative px-3 pe-5">Add Funds<span class="add-icon rounded-circle d-inline-block bg-icon"></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--================== main heading end =========================-->
+
+        <!--================== section content start =========================-->
+        <section class="p-2 p-sm-3 p-md-4 p-lg-4 pt-0 pt-lg-0 pt-md-0 pb-2">
+          <div class="container-fluid">
+            <div class="row flex-container">
+              <!--=============== page left content start ===================-->
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 page-left">
+                <div class="row">
+
+                  <!--=============== statistics chart start ===================-->
+                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="card border-0 bg-body rounded mb-4">
+                      <div class="card-body">
+                        <div class="d-flex mb-1">
+                          <h5 class="sub-heading me-auto">Statistics</h5>
+                          <div class="dropdown ms-auto">
+                            <a class="nav-link text-dark border-0 bg-body rounded dropdown-toggle pt-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <span><small>Last 6 months</small><span class="month-icon bg-icon"></span></span>
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm bg-body dropdown-menu-end">
+                              <li class="dropdown-item"><a>Last 3 Months</a></li>
+                              <li class="dropdown-item"><a>Last 6 Months</a></li>
+                              <li class="dropdown-item"><a>Last 9 Months</a></li>
+                              <li class="dropdown-item"><a>Last 12 Months</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div id="chart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--================== statistics chart end =========================-->
+                  <!--================== sales chart start =========================-->
+                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="card border-0 bg-body rounded mb-4">
+                      <div class="card-body">
+                        <div class="d-flex mb-2">
+                          <h5 class="sub-heading me-auto">Sales Distribution</h5>
+                        </div>
+                        <div class="canvas-con">
+                          <p class="position-absolute mb-0 mt-5">Sales</p>
+                          <div class="canvas-con-inner">
+                            <canvas id="mychart" height="180px"></canvas>
+                          </div>
+                        </div>
+                        <div id="my-legend-con" class="mb-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--================== sales chart start =========================-->
+                  <!--================== Referrer table start =========================-->
+                  <div class="col-md-12">
+                    <div class="card border-0 bg-body rounded mb-4">
+                      <div class="card-body mb-2">
+                        <div class="d-flex mb-2">
+                          <h5 class="sub-heading me-auto">Referrer</h5>
+                        </div>
+                        <div class="table-responsive mb-3">
+                          <table class="table table-responsive mb-0 text-nowrap">
+                            <thead>
+                              <tr>
+                                <th>Location</th>
+                                <th>Views</th>
+                                <th>Sales</th>
+                                <th>Conversion</th>
+                                <th>Total</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>google.com</td>
+                                <td>3746</td>
+                                <td>752</td>
+                                <td>43%</td>
+                                <td>$19,291</td>
+                              </tr>
+                              <tr>
+                                <td>facebook.com</td>
+                                <td>3746</td>
+                                <td>752</td>
+                                <td>43%</td>
+                                <td>$19,291</td>
+                              </tr>
+                              <tr>
+                                <td>twitter.com</td>
+                                <td>3746</td>
+                                <td>752</td>
+                                <td>43%</td>
+                                <td>$19,291</td>
+                              </tr>
+                              <tr>
+                                <td>Direct, email, IM</td>
+                                <td>3746</td>
+                                <td>752</td>
+                                <td>43%</td>
+                                <td>$19,291</td>
+                              </tr>
+                              <tr>
+                                <td>linkedin.com</td>
+                                <td>3746</td>
+                                <td>752</td>
+                                <td>43%</td>
+                                <td>$19,291</td>
+                              </tr>
+                              <tr>
+                                <td>instagram.com</td>
+                                <td>3746</td>
+                                <td>752</td>
+                                <td>43%</td>
+                                <td>$19,291</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <a href="" class="text-primary text-decoration-none show-more-link ms-4">Show More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--================== Referrer table end ====================-->
+                </div>
+              </div>
+              <!--=============== page left content end ===================-->
+              <!--=============== page right content start ===================-->
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 page-right">
+                <!--================== user detail start =========================-->
+                <div class="card border-0 bg-body rounded mb-4">
+                  <div class="card-body">
+                    <div class="text-center pb-2 mb-3" style="border-bottom:1px solid #f5f7fb;">
+                      <div class="mx-auto position-relative user-profile">
+                        <img class="img-fluid rounded-circle shadow-sm" src="assets/img/profile-pic-01.jpg"/>
+                        <span class="edit-icon rounded-circle d-inline-block bg-icon"></span>
+                      </div>
+
+                      <h5 class="sub-heading mt-3 mb-1">Nick Herasimenka</h5>
+                      <p class="mb-2" style="opacity: 0.5;"><small>United States</small></p>
+                      <div class="">
+                        <span class="twitter-icon mx-1 d-inline-block bg-icon"></span>
+                        <span class="facebook-icon mx-1 d-inline-block bg-icon"></span>
+                        <span class="linkedin-icon mx-1 d-inline-block bg-icon"></span>
+                        <span class="whatsapp-icon mx-1 d-inline-block bg-icon"></span>
+                      </div>
+
+                    </div>
+                    <div class="d-flex mb-1">
+                      <h5 class="sub-heading me-auto">Our Users</h5>
+                      <div class="dropdown ms-auto">
+                        <a class="text-dark border-0 bg-body rounded dropdown-toggle pt-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="dot-option-icon d-inline-block bg-icon"></span>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-sm bg-body dropdown-menu-end">
+                          <li class="dropdown-item"><a>option 1</a></li>
+                          <li class="dropdown-item"><a>option 2</a></li>
+                          <li class="dropdown-item"><a>option 3</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <ul class="user_detail_list m-0 p-0 position-relative mt-2">
+                      <li>
+                        <img style="width:45px;" class="img-fluid rounded-circle shadow-sm position-absolute start-0" src="assets/img/profile-pic-03.jpg"/>
+                        <h5 class="username pt-1 mb-1">Drew James</h5>
+                        <div class="d-flex user-detail">
+                          <span class="me-auto">United States</span>
+                          <span class="ms-auto">Mobile : 9876543210</span>
+                        </div>
+                      </li>
+                      <li>
+                        <img style="width:45px;" class="img-fluid rounded-circle shadow-sm position-absolute start-0" src="assets/img/profile-pic-02.jpg"/>
+                        <h5 class="username pt-1 mb-1">Bavid Kames</h5>
+                        <div class="d-flex user-detail">
+                          <span class="me-auto">United States</span>
+                          <span class="ms-auto">Mobile : 9876543210</span>
+                        </div>
+                      </li>
+                      <li>
+                        <img style="width:45px;" class="img-fluid rounded-circle shadow-sm position-absolute start-0" src="assets/img/profile-pic-04.jpg"/>
+                        <h5 class="username pt-1 mb-1">Lavid Emes</h5>
+                        <div class="d-flex user-detail">
+                          <span class="me-auto">United States</span>
+                          <span class="ms-auto">Mobile : 9876543210</span>
+                        </div>
+                      </li>
+
+                    </ul>
+
+                  </div>
+                </div>
+                <!--================== user detail end =========================-->
+                <!--================== video section start =========================-->
+                <div class="card border-0 bg-body rounded mb-4 product-vdo-section">
+                  <div class="card-body">
+                    <div class="d-flex mb-1">
+                      <h5 class="sub-heading me-auto">Product Video</h5>
+                      <div class="dropdown ms-auto">
+                        <a class="text-dark border-0 bg-body rounded dropdown-toggle pt-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="dot-option-icon d-inline-block bg-icon"></span>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-sm bg-body dropdown-menu-end">
+                          <li class="dropdown-item"><a>option 1</a></li>
+                          <li class="dropdown-item"><a>option 2</a></li>
+                          <li class="dropdown-item"><a>option 3</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a class="position-relative d-block video_link" href="https://youtu.be/Oy6hk6Y7VHQ" target="_blank">
+                      <span class="video-play-button">
+                        <span class="play-icon d-inline-block bg-icon"></span>
+                      </span>
+                      <img src="assets/img/video-thumbnail.png" class="rounded shadow-sm img-fluid mt-1">
+                    </a>
+                  </div>
+                </div>
+                <!--================== video section end =========================-->
+              </div>
+              <!--=============== page right content end ===================-->
+            </div>
+          </div>
+        </section>
+        <!--================== section content end =========================-->
+
+      </div>
+    </div>
+
+    <!--================== script start =========================-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!--================== script start =========================-->
+  </body>
+  </html>

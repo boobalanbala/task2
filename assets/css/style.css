@@ -1,0 +1,539 @@
+/*******************source sans pro import css*******************/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+/*********************general css start *********************/
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+	background:#3C3B54;
+	color:#4D4F5C;
+	font-weight:400;
+	font-size:14px;
+}
+/*********************custom scroll bar css start *********************/
+/*** width ***/
+::-webkit-scrollbar {
+	width: 7px;
+}
+/*** height ***/
+::-webkit-scrollbar {
+	height: 7px;
+}
+/*** Track ***/
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+/*** Handle ***/
+::-webkit-scrollbar-thumb {
+	background: #adadad;
+}
+/********************* Handle on hover  *********************/
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+/********************* custom scroll bar css end *********************/
+
+/********************* table css start *********************/
+table thead{
+	background:#F5F6FA ;
+}
+table thead th{
+	border:0;
+	color:#A3A6B4;
+	font-weight:600;
+	padding-top: .53rem!important;
+	padding-bottom: .53rem!important;
+}
+table tbody td{
+	color:#4D4F5C;
+	border-bottom: 1px solid #F5F6FA;
+	padding-top: .53rem!important;
+	padding-bottom: .53rem!important;
+}
+/********************* table css end *********************/
+
+/********************* side bar css start *********************/
+.wrapper{
+	align-items: stretch;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.main-content{
+	background:#F5F7FB;
+	transition: margin-left .3s ease-in-out,left .3s ease-in-out,margin-right .3s ease-in-out,right .3s ease-in-out;
+	margin-left:220px;
+	border-top-left-radius: 20px;
+	min-height:100vh;
+}
+.sidebar{
+	background: #43425D;
+	border-right: 0;
+	box-shadow: 0 0 2rem 0 rgb(0 0 0 / 5%);
+	max-width: 220px;
+	min-width: 220px;
+	transition: margin-left .3s ease-in-out,left .3s ease-in-out,margin-right .3s ease-in-out,right .3s ease-in-out;
+	z-index: 1;
+	min-height:100vh;
+	max-height:100vh;
+	overflow-y: auto;
+	position:fixed;
+}
+.sidebar .logo{
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	color: #fff;
+	height: 62px;
+	background: #3C3B54;
+}
+.sidebar .sidemenu_list{
+	padding:0;
+	margin:0;
+}
+.sidebar .sidemenu_list li{
+	list-style:none;
+	position:relative;
+	margin-top:3px;
+}
+.sidebar .sidemenu_list li a{
+	display: block;
+	padding: 11px 10px 11px 25px;
+	padding-left: 50px;
+	text-decoration: none;
+	color: #fff;
+	border-left: 3px solid transparent;
+}
+.sidebar .sidemenu_list li a .badge{
+	margin-top:1px;
+}
+.sidebar .sidemenu_list li a:hover{
+	background: #3C3B54 ;
+}
+.sidebar .sidemenu_list li a.active{
+	background: #3C3B54 ;
+	border-left:3px solid #A3A0FB;
+}
+.sidebar .sidemenu_list li a .menulist-icon {
+	left: 22px;
+	top: 11px;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: url(../img/icons.png) no-repeat;
+}
+.sidebar .sidemenu_list li a .home-icon {
+	background-position: -2px -2px;
+}
+.sidebar .sidemenu_list li a .dashboard-icon {
+	background-position: -58px -2px;
+}
+.sidebar .sidemenu_list li a .inbox-icon {
+	background-position: -114px -2px;
+}
+.sidebar .sidemenu_list li a .product-icon {
+	background-position: -170px -2px;
+}
+.sidebar .sidemenu_list li a .admin-icon {
+	background-position: -226px -2px;
+}
+.sidebar .sidemenu_list li a:hover .home-icon, .sidebar .sidemenu_list li a.active .home-icon {
+	background-position: -30px -2px;
+}
+.sidebar .sidemenu_list li a:hover .dashboard-icon, .sidebar .sidemenu_list li a.active .dashboard-icon {
+	background-position: -86px -2px;
+}
+.sidebar .sidemenu_list li a:hover .inbox-icon, .sidebar .sidemenu_list li a.active .inbox-icon {
+	background-position: -142px -2px;
+}
+.sidebar .sidemenu_list li a:hover .product-icon, .sidebar .sidemenu_list li a.active .product-icon {
+	background-position: -198px -2px;
+}
+.sidebar .sidemenu_list li a:hover .admin-icon, .sidebar .sidemenu_list li a.active .admin-icon {
+	background-position: -254px -2px;
+}
+.sidebar-disable .sidebar {
+	margin-left: -220px;
+}
+.sidebar-disable .main-content {
+	margin-left: 0px;
+	border-top-left-radius: 20px;
+}
+.sidebar-disable .topnav {
+	border-top-left-radius: 0px;
+}
+/********************* side bar css end *********************/
+
+/********************* icon css start *********************/
+.bg-icon{
+	width:24px;
+	height:24px;
+	background: url("../img/icons.png") no-repeat;
+}
+.collapse-icon{
+	background-position: 0px -36px;
+}
+.notification-icon{
+	background-position: -196px -36px;
+}
+.twitter-icon{
+	background-position: -280px 0px;
+}
+.facebook-icon{
+	background-position: -308px 0px;
+}
+.linkedin-icon{
+	background-position: -336px 0px;
+}
+.whatsapp-icon{
+	background-position: -362px 0px;
+}
+.profilelist-icon{
+	left: 0;
+	top: -2px;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: url("../img/icons.png") no-repeat;
+}
+.profile-icon{
+	background-position: -30px -37px;
+}
+.billing-icon{
+	background-position: -57px -37px;
+}
+.logout-icon{
+	background-position: -85px -37px;
+}
+.right-top-icon .dropdown-item a{
+	position: relative;
+	padding-left: 30px;
+}
+.add-icon{    
+	background-color: #514DDC;
+	position: absolute;
+	background-position: -281px -36px;
+	right: 8px;
+}
+.edit-icon {
+	background-color: #6763e3;
+	border: 2px solid #fff;
+	position: absolute;
+	background-position: -253px -36px;
+	right: 4px;
+	bottom: 0;
+	width: 26px;
+	height: 26px;
+}
+.search-icon{    
+	position: absolute;
+	top: 3px;
+	background-position: -168px -36px;
+}
+.month-icon{
+	position: absolute;
+	top: -2px;
+	background-position: -224px -36px;
+}
+.user-icon{
+	position: absolute;
+	top: 3px;
+	background-position: -224px -36px;
+}
+.play-icon{
+	background-position: -113px -36px;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	z-index: 11;
+	position: relative;
+}
+/********************* icon css end *********************/
+
+/********************* btn css start *********************/
+.btn-violet{
+	color: #fff;
+	background-color: #6763E3;
+	border-color: #5d58f5;
+}
+.btn-violet:hover{
+	color: #fff;
+	background-color: #5d58f5;
+	border-color: #5d58f5;
+}
+/********************* btn css end *********************/
+
+/********************* top bar css start *********************/
+.topnav{
+	border-top-left-radius: 20px;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu{
+	border-radius: 10px;
+}
+.form-control:focus{
+	box-shadow:none;
+}
+.user-profile{
+	width: 100px;
+}
+.user-profile img{
+	width:96px;
+}
+.notification-drop{
+	min-width: 22rem;
+	max-width: 22rem;
+	max-height: 20rem;
+	overflow-y: auto;
+}
+.notification-drop li a.notification-link{
+	padding-left: 15px;
+}
+.notification-drop li a .notification_p{
+	margin-bottom:0px;
+	margin-top:3px;
+	opacity: 0.5;
+	white-space: pre-wrap;
+	color: #43425D!important;
+}
+.notification-drop li{
+	list-style: none;
+	position: relative;
+	padding-left: 55px;
+}
+.notification-drop li .notification_p .notification-username{
+	color:#4D4F5C;
+	font-size:15px;
+	font-weight:600;
+}
+.notification-drop li .notification-link img{
+	width: 38px;
+	top: 8px;
+	left: 15px!important;
+}
+.notification-time{
+	opacity: 0.5;
+}
+.input-global-search{
+	padding-left: 1.8rem;
+}
+.dot-option-icon{
+	background-position: -140px -36px;
+}
+.cursor-pointer{
+	cursor: pointer;
+}
+.dropdown-toggle::after{
+	display:none;
+}
+.indicator{
+	background: #81E37A ;
+	border-radius: 50%;
+	height: 8px;
+	position: absolute;
+	right: 10px;
+	top: 12px;
+	width: 8px;
+}
+.username{
+	color:#4D4F5C;
+	font-size:15px;
+	font-weight:600;
+}
+.user-detail{
+	color:#43425D;
+	font-size:13px;
+}
+.user-detail .notification-username{
+	font-weight:600;
+}
+.user-top-dropdown{
+	background-color: #fff;
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+	border-radius: 20px;
+	padding: 0 0 0px 10px;
+}
+.user-top-dropdown:hover{
+	background-color: #FBFBFD;
+}
+.search-div{
+	width:250px;
+}
+/********************* top bar css end *********************/
+
+/********************* heading css start *********************/
+.heading{
+	font-weight:600;
+	font-size:28px;
+}
+.sub-heading{
+	color:#4D4F5C;
+	font-size:18px;
+	font-weight:500;
+}
+/********************* heading css end *********************/
+
+/********************* chart css start*********************/
+.apexcharts-toolbar{
+	display:none!important;
+}
+.apexcharts-text tspan, .apexcharts-legend{
+	opacity: 0.6;
+}
+.canvas-con {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 222px;
+	position: relative;
+}
+.sales_label_list li{
+	list-style: none;
+	display: inline-block;
+	width:50%;
+	font-size:13px;
+	color:#43425D;
+}
+.sales_label_list .chart-legend{
+	display: inline-block;
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	margin-right:10px;
+}
+.sales_label_list .city-name{
+	font-weight:500;
+	padding-right:5px;
+}
+.sales_label_list .sales-count{
+	opacity: 0.5;
+}
+/********************* chart css end *********************/
+
+/********************* dropdown css start *********************/
+.dropdown-menu{
+	box-shadow: 0px 0px 8px #5565751A!important;
+	border: 1px solid #eee;
+}
+.dropdown-menu .dropdown-item{
+	padding-top:6px;
+	padding-bottom:6px;
+	font-size:13px;
+	color: #4D4F5C!important;
+	cursor: pointer;
+}
+.dropdown-menu .dropdown-item a{
+	color: #4D4F5C!important;
+}
+.dropdown-item.active, .dropdown-item:active, .dropdown-item:hover{
+	background-color: #f5f7fb;
+}
+/********************* dropdown css end *********************/
+
+/********************* video section css start *********************/
+.video-play-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	height: 44px;
+	border-radius: 50%;
+}
+.video-play-button:before {
+	content: "";
+	position: absolute;
+	z-index: 0;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: #fff;
+	border-radius: 50%;
+}
+.video-play-button:after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	display: block;
+	width: 70px;
+	height: 70px;
+	opacity: 0.33;
+	background: #fff;
+	border-radius: 50%;
+	transition: all 200ms;
+}
+.video_link:hover .video-play-button:after {
+	width: 80px;
+	height: 80px;
+}
+.video_link img{
+	width:100%;
+	height:180px;
+}
+/********************* video section css end *********************/
+
+.user_detail_list li{
+	list-style:none;
+	padding-left: 65px;
+	margin-bottom:15px;
+}
+.show-more-link:hover{
+	text-decoration: underline!important;
+}
+/********************* general css end *********************/
+
+/********************* responsive css start *********************/
+@media only screen and (max-width: 991px) {
+	.navbar-nav{
+		flex-direction: row;
+	}
+	.navbar-nav .dropdown-menu {
+		position: absolute;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.notification-drop {
+		min-width: 95vw;
+		right: -40px!important;
+		max-width: 95vw;
+	}
+	.search-mobile-icon{
+		background-position: -167px -36px;
+	}
+	.search-mobile-icon{
+		display: inline-block!important;
+	}
+	.search-div{
+		display:none;
+	}
+	.user-top-dropdown span{
+		display: none;
+	}
+	.user-top-dropdown img{
+		margin-left: .5rem!important;
+	}
+	.main-content {
+		min-width: 100vw;
+		width: 100vw;
+	}
+	.page-left {
+		order: 2;
+	}
+	.page-right {
+		order: 1;
+	}
+	.main-content{
+		padding-bottom:250px;
+	}
+	.product-vdo-section{
+		bottom: 0;
+		z-index: 1;
+		position: absolute;
+		width: calc(100vw - 9.5%);
+	}
+}
+/********************* responsive css end *********************/
